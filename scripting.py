@@ -3,7 +3,7 @@ import requests
 headers= {
     'User-Agent':'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
 }
-link = requests.get("https://quikr.com/",headers=headers)
+link = requests.get("https://www.quikr.com/cars/used-cars/all-india",headers=headers)
 # print(link)
 # i have respone 403 => 403 the succes code
 
@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 from bs4 import BeautifulSoup as bs
 
 soup = BeautifulSoup(link.content,"html.parser")
-# print(soup.prettify())
+print(soup.prettify())
 
 # get the title
 print(soup.title)
@@ -31,5 +31,5 @@ print(soup.title.name)
 # get the parent tage
 print(soup.title.parent.name)
 
-s = soup.find('div', class_='entry-content')
-content = s.find_all('p')
+# s = soup.find('div', class_='entry-content')
+# content = s.find_all('p')

@@ -15,16 +15,41 @@
     
     <div class = "container">
         <div class ="row">
-            <div class = "card mt-50" style="width : 100%; height:100%">
+            <div class = "card mt-50" style="width : 100%; height : 100%">
                 <div class = "card-header">
-                    <div class ="col-12">
+                    <div class ="col-12" style="text-align: center">
                         <h1>Welcome To House Predictor</h1>
                     </div>
                 </div>
 
                 <div class = "card-body">
+                    <form method="post" action="#" accept-charset="utf-8">
+                        <div class="col-10 form-group" style="text-align:center">
+                            <label><b> Select the Long Ground: </b> </label>
+                            <select class = "selectpicker form-control" id = "LT" name="LT" required="1">
+                                {% for i in LT %}
+                                    <option value="{{i}}">{{i}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
 
+                        <div class="col-10 form-group" style="text-align:center">
+                            <label><b> Select the Long House : </b> </label>
+                            <select class = "selectpicker form-control" id = "LB" name="LB" required="1">
+                                {% for i in LB %}
+                                    <option value="{{i}}">{{i}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class ="col-10 form-group"style="text-align:center">
+                            <button class "btn-primary form-control" onclick="">Predict Price</button>
+                        </div>
+                    </form>
+                    
                 </div>
+            </div>
+        </div>
+    </div>
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

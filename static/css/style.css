@@ -6,6 +6,11 @@
 .bg-dark{
     background-color: #75767B;
 }
+
+
 .mnt-50{
     margin-top: 50px;
+}
+#canvas{
+    border: 2px solid black;
 }
